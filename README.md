@@ -1,16 +1,6 @@
 # Docker Machine NFS
 
-## Requirements
-
-* [Docker Machine](https://docs.docker.com/machine/) 0.5.0+
-
-## Mac OS X 10.9+
-
-Activates [NFS](https://en.wikipedia.org/wiki/Network_File_System) for an
-existing boot2docker box created through
-[Docker Machine](https://docs.docker.com/machine/).
-
-:warning: There can be an issue with the NFS under Mac OS X High Sierra (see issue [#79](https://github.com/adlogix/docker-machine-nfs/issues/79) for more info) :warning:
+This repo is a fork of [adlogix/docker-machine-nfs](https://github.com/adlogix/docker-machine-nfs) and bringing support to Windows Subsystem for Linux
 
 ## Windows 10 with WSL
 
@@ -23,28 +13,15 @@ existing boot2docker box created through
 
 ## Install
 
-### Standalone
-
 ```sh
-curl -s https://raw.githubusercontent.com/adlogix/docker-machine-nfs/master/docker-machine-nfs.sh |
+curl -s https://raw.githubusercontent.com/DzeryCZ/docker-machine-nfs/master/docker-machine-nfs.sh |
   sudo tee /usr/local/bin/docker-machine-nfs > /dev/null && \
   sudo chmod +x /usr/local/bin/docker-machine-nfs
 ```
 
-### [Homebrew](http://brew.sh/)
-
-```sh
-brew install docker-machine-nfs
-```
-
-
 ## Supports
 
 * Virtualbox
-* Paralells
-* VMware Fusion
-* VMware Vsphere
-* xhyve
 
 ## Usage
 
@@ -101,4 +78,5 @@ Examples:
 
 * Heavily inspired by @[mattes](https://github.com/mattes) ruby version
 [boot2docker-nfs.rb](https://gist.github.com/mattes/4d7f435d759ca2581347).
+* Fork of @[adlogix/docker-machine-nfs](https://github.com/adlogix/docker-machine-nfs)
 * @[DzeryCZ](https://github.com/DzeryCZ) added support for Windows with WSL
